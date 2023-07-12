@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-height: 100vh;
+  min-block-size: 100vh;
+  background-color: black;
+  color: white;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background-color: red;
+}
+
+.footer {
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  overflow-y: scroll;
+}
+
+.one,
+.three {
+  width: 20%;
+}
+
+.one {
+  background-color: green;
+}
+
+.two {
+  width: 60%;
+}
+
+.three {
+  background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .one {
+    width: 50%;
+    order: 2;
+  }
+
+  .two {
+    width: 100%;
+    order: 1;
+  }
+
+  .three {
+    width: 50%;
+    order: 3;
+  }
+}
