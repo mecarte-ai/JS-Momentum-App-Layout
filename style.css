@@ -1,64 +1,64 @@
 * {
   margin: 0;
-  box-sizing: border-box;
 }
 
 .container {
-  max-height: 100vh;
-  min-block-size: 100vh;
-  background-color: black;
+  display: grid;
+  place-items: center;
+
+  background-color: blue;
   color: white;
 
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
-.header {
+.centered-content {
   background-color: red;
 }
 
+.header {
+  top: 0;
+  position: absolute;
+  background-color: yellow;
+  width: 100%;
+}
+
 .footer {
-  background-color: blue;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.main {
-  display: grid;
-  place-items: center;
-  overflow-y: scroll;
-}
-
-.one,
-.three {
-  width: 20%;
-}
-
-.one {
+  position: absolute;
+  bottom: 0;
   background-color: green;
+  width: 100%;
+  flex-wrap: wrap;
+
+  display: flex;
+}
+
+.one, .three{
+  width: 20%;
+  background-color: crimson;
 }
 
 .two {
   width: 60%;
-}
-
-.three {
-  background-color: red;
+  background-color: blueviolet;
 }
 
 @media only screen and (max-width: 600px) {
-  .one {
-    width: 50%;
-    order: 2;
-  }
-
   .two {
     width: 100%;
     order: 1;
   }
 
-  .three {
+  .one, .three{
     width: 50%;
+  }
+
+  .one {
+    order: 2;
+  }
+
+  .three {
     order: 3;
   }
 }
+
