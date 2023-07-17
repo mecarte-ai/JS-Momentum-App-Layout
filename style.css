@@ -4,8 +4,8 @@
 }
 
 .container {
-  max-height: 100vh;
-  min-block-size: 100vh;
+  max-height: 100svh;
+  min-block-size: 100svh;
   background-color: black;
   color: white;
 
